@@ -1,6 +1,6 @@
-## **username :admin**
+## **username : admin** or ## **username : sunil**
 
-**password: Noroff123**
+## **password: Noroff123** or ## **password: 123456**
 
 # Project Exam 2
 
