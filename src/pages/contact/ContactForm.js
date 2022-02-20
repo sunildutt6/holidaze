@@ -27,7 +27,7 @@ function ContactForm() {
       <h3>contact from</h3>
 
       {submitted && (
-        <Alert className="form-control">We will get in touch with you.</Alert>
+        <Alert className="form-control">Thank you for contacting</Alert>
       )}
       <Form className="form" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">

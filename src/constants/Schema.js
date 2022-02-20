@@ -26,7 +26,7 @@ export const schemaLogin = yup.object().shape({
   password: yup.string().required("Please enter your password"),
 });
 
-export const HotelSchema = yup.object().shape({
+export const hotelSchema = yup.object().shape({
   title: yup.string().required("please provide a title"),
   price: yup
     .number()
@@ -34,4 +34,5 @@ export const HotelSchema = yup.object().shape({
     .min(0, "Should be greater than zero."),
   description: yup.string().required("Please enter description"),
   image_url: yup.string().required("Please enter an image URL"),
+  address: yup.string().required("Please enter an image URL"),
 });
