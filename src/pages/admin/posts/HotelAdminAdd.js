@@ -45,7 +45,6 @@ function HotelAdminAdd() {
   async function onSubmit(data) {
     setSubmitting(true);
     setServerError(null);
-
     console.log(data);
 
     try {
@@ -69,7 +68,7 @@ function HotelAdminAdd() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="text"
-                placeholder="title"
+                placeholder="Title"
                 {...register("title")}
               />
               {errors.title && (
@@ -80,7 +79,7 @@ function HotelAdminAdd() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="text"
-                placeholder="address"
+                placeholder="Address"
                 {...register("address")}
               />
               {errors.address && (
@@ -91,7 +90,7 @@ function HotelAdminAdd() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="text"
-                placeholder="price"
+                placeholder="Price"
                 {...register("price")}
               />
               {errors.price && (
@@ -102,7 +101,7 @@ function HotelAdminAdd() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="text"
-                placeholder="image_url"
+                placeholder="Image"
                 {...register("image_url")}
               />
               {errors.image_url && (
@@ -113,7 +112,7 @@ function HotelAdminAdd() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 as="textarea"
-                placeholder="description"
+                placeholder="Description"
                 {...register("description")}
               />
               {errors.description && (
