@@ -27,7 +27,15 @@ const StyledCard = styled.div`
   }
 `;
 
-function HotelItems({ id, title, address, description, image_url, price }) {
+export default function PostItems({
+  id,
+  title,
+  address,
+  description,
+  image,
+  image_url,
+  price,
+}) {
   return (
     <Col lg={4}>
       <StyledCard>
@@ -60,8 +68,8 @@ function HotelItems({ id, title, address, description, image_url, price }) {
                 <strong>NOK {price}</strong>
               </span>
               <span>
-                <Link to={`detail/${id}`} className="btn">
-                  Explore
+                <Link to={`/admin/edit/${id}`} className="btn">
+                  edit
                 </Link>
               </span>
             </Card.Text>
@@ -71,14 +79,12 @@ function HotelItems({ id, title, address, description, image_url, price }) {
     </Col>
   );
 }
-HotelItems.prototype = {
+PostItems.prototype = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  image_url: PropTypes.string.isRequired,
+  address: PropTypes.string,
+  image: PropTypes.string,
+  image_url: PropTypes.string,
   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
 };
-
-export default HotelItems;

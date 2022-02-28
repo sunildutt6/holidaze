@@ -1,17 +1,26 @@
 import React from "react";
-import Heading from "../../components/layout/Heading";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import HotelPage from "../hotels/HotelPage";
-import DashBoardMenu from "./DashBoardMenu";
 
 function Admin() {
   return (
     <>
       <HotelPage />
-      <Container>
-        <Heading title="Admin section" />
-        <DashBoardMenu />
-      </Container>
+      <Navbar expand="lg">
+        <Container>
+          <Nav className="mx-auto">
+            <Link to="/admin/add" exact className="nav-link">
+              Add Hotel
+            </Link>
+            <Link to="/admin/edit" className="nav-link">
+              Edit Hotel
+            </Link>
+          </Nav>
+        </Container>
+      </Navbar>
     </>
   );
 }

@@ -9,8 +9,9 @@ import Contact from "../../pages/contact/Contact";
 import Login from "../../pages/login/Login";
 import { AuthProvider } from "../../context/AuthContext";
 import Admin from "../../pages/admin/Admin";
-import PostHotel from "../../pages/admin/posts/PostHotel";
-import AddHotel from "../../pages/admin/posts/AddHotel";
+import PostHotels from "../../pages/admin/PostHotels";
+import EditHotel from "../../pages/admin/EditHotel";
+import AddHotels from "../../pages/admin/AddHotels";
 
 function Layout() {
   return (
@@ -25,8 +26,9 @@ function Layout() {
           <Route path="/contact" component={Contact} />
           <Route path="/login" component={Login} />
           <Route path="/admin" exact component={Admin} />
-          <Route path="/admin/posts" exact component={PostHotel} />
-          <Route path="/admin/posts/add" exact component={AddHotel} />
+          <Route path="/admin/add" component={AddHotels} />
+          <Route path="/admin/edit" exact component={PostHotels} />
+          <Route path="/admin/edit/:id" exact component={EditHotel} />
         </Switch>
       </Router>
     </AuthProvider>

@@ -36,3 +36,12 @@ export const hotelSchema = yup.object().shape({
   image_url: yup.string().required("Please enter an image URL"),
   address: yup.string().required("Please enter an image URL"),
 });
+
+export const AddProductsSchema = yup.object().shape({
+  title: yup.string().required("Please enter title"),
+  description: yup.string().required("Please enter some description"),
+  address: yup.string().required("Please enter address"),
+
+  price: yup.number().required("Please enter price"),
+  popularity: yup.boolean().required("Please use 1 for true or 0 for false"),
+});

@@ -20,7 +20,7 @@ html,body{
 html{
     font-size: 100%;
 }
-body{
+body,{
     background:var(--white);
     font-family: oscine, sans-serif;
     font-style: normal;
@@ -78,6 +78,16 @@ h4 {
         color:var(--white);
     }
 }
+.navbar-brand,
+  .navbar-nav .nav-link {
+    color: var(--grey);
+    margin-right: 2rem;
+  }
+  a.nav-link.active,
+  .btn {
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary-blue);
+  }
 /*card */
 h2 {
     margin: 1.5rem 0;

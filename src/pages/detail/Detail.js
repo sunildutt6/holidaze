@@ -89,7 +89,7 @@ function Detail() {
   if (!id) {
     history.push("/");
   }
-  const url = BASE_URL + HOTELS_URL + id;
+  const url = BASE_URL + HOTELS_URL + "/" + id;
 
   useEffect(
     function () {

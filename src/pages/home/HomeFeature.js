@@ -21,6 +21,8 @@ function HomeFeature() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  let filtered = hotel.filter((data) => data.popularity);
+
   useEffect(function () {
     async function getData() {
       try {
@@ -54,23 +56,22 @@ function HomeFeature() {
       <StyleDiv>
         <Heading title="featured hotels" />
         <Row>
-          {hotel
-            .filter((hot) => hot.popularity)
-            .map(function (restaurant) {
-              const { id, title, address, description, image_url, price } =
-                restaurant;
-              return (
-                <HotelItems
-                  key={id}
-                  id={id}
-                  title={title}
-                  address={address}
-                  description={description}
-                  image_url={image_url}
-                  price={price}
-                />
-              );
-            })}
+          {filtered.map(function (restaurant) {
+            const { id, title, address, description, image, image_url, price } =
+              restaurant;
+            return (
+              <HotelItems
+                key={id}
+                id={id}
+                title={title}
+                address={address}
+                description={description}
+                image_url={image_url}
+                image={image}
+                price={price}
+              />
+            );
+          })}
         </Row>
       </StyleDiv>
     </Container>
